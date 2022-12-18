@@ -11,14 +11,32 @@ body{
     align-items: center;
     justify-content: center;
     background-color: black;
+    overflow: hidden;
 }
+
 .greetings{
-    font-size: 6rem;
+    position: absolute;
+    top: 4rem;
+    margin-top: 10rem;
+    font-size: 3rem;
     font-weight: 900;
 }
-.greetings > span{
-    animation: glow 2.5s ease-in-out infinite;
+.greetings .from {
+    font-size: 1rem;
 }
+
+.sempro, .happy{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 200;
+    z-index: 9;
+}
+
+.greetings, .greetings > span{
+    animation: glow 4.5s ease-in-out infinite;
+}
+
 @keyframes glow{
     0%, 100%{
         color: #fff;
@@ -39,11 +57,28 @@ body{
     animation-delay: .6s;
 }
 .greetings > span:nth-child(5){
+    margin-right: 2rem;
     animation-delay: .8s;
+}
+.greetings > span:nth-child(6){
+    animation-delay: 1s;
+}
+.greetings > span:nth-child(7){
+    animation-delay: 1.2s;
+}
+.greetings > span:nth-child(8){
+    animation-delay: 1.4s;
+}
+.greetings > span:nth-child(9){
+    animation-delay: 1.6s;
+}
+.greetings > span:nth-child(10){
+    animation-delay: 1.8s;
 }
 
 .description{
     font-size: 1.5rem;
+    margin-top: 300px;
     margin-bottom: 20px;
 }
 
@@ -53,7 +88,7 @@ body{
     color: #111;
 }
 
-@media screen and (max-width:574px){
+@media screen and (max-width:674px){
     .greetings{
         display: block;
         font-size: 3rem;
